@@ -1,11 +1,16 @@
 // Specific CSS for your home-page
-// Navbar design
 
+// Body
+body {
+  background-color: #FF9F45;
+  font-family: 'Montserrat';
+}
+
+// Navbar design
 .navbar-lewagon {
   justify-content: space-between;
-  margin: 20px;
   background-color: transparent;
-
+  padding: 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,10 +18,10 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 64px;
+  border-radius: 50%;
 }
 //Banner design:
-
 .banner {
   background-size: cover;
   background-position: top;
@@ -41,11 +46,27 @@
 }
 .container h1 p {
   margin-top: 20px;
-
-
 }
-// Cards
 
+.btn-lg {
+  color: white;
+}
+
+//Section headline
+.section-headline {
+  display: flex;
+  font-size: 24px;
+  color: white;
+  justify-content: center;
+  font-weight: lighter;
+  font-family: 'Montserrat';
+  padding: 24px;
+  background-color: black;
+  opacity: 0.4;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+// Cards design
 .card-product {
   overflow: hidden;
   background: white;
@@ -70,7 +91,6 @@
   margin: 0;
 }
 
-
 .card-product .card-product-infos {
   padding: 16px;
   display: flex;
@@ -91,24 +111,4 @@
   justify-content:space-between;
   align-items: center;
   list-style-type: none;
-}
-// Body
-body {
-  background-color: #FF9F45;
-  font-family: 'Montserrat';
-}
-.section-headline {
-  display: flex;
-  font-size: 24px;
-  color: white;
-  justify-content: center;
-  font-weight: lighter;
-  font-family: 'Montserrat';
-  padding: 24px;
-  background-color: black;
-  opacity: 0.4;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-}
-.btn-lg {
-  color: white;
 }

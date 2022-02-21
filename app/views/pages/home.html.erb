@@ -22,50 +22,55 @@
     </div>
   </div>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= image_path "capy-banner.jpg"%>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= image_path "banner.jpg"%>);">
   <div class="container">
     <h1> <strong>CapyRent</strong></h1>
     <p>Rent your friendly capybara!</p>
-    <a class="btn btn-success" href="#">Meet your new fluffy friend!</a>
+    <a class="btn btn-success btn-lg" href="#">Meet your new fluffy friend!</a>
   </div>
 </div>
-<div>
+<div class=>
+  <h2 class='section-headline'>Cutest capybaras from your area:</h2>
   <ul class="cards">
     <li>
-      <div class="card-trip">
+      <div class="card-product">
         <img src="<%= image_path "capy1.jpg"%>" />
-        <div class="card-trip-infos">
+        <div class="card-product-infos">
           <div>
             <h2>Title here</h2>
             <p>Short description here!</p>
           </div>
-          <h2 class="card-trip-pricing">€29.99</h2>
+          <h2 class="card-product-pricing">€29.99</h2>
         </div>
       </div>
     </li>
     <li>
-      <div class="card-trip">
+      <div class="card-product">
         <img src="<%= image_path "capy2.jpg"%>" />
-        <div class="card-trip-infos">
+        <div class="card-product-infos">
           <div>
             <h2>Title here</h2>
             <p>Short description here!</p>
           </div>
-          <h2 class="card-trip-pricing">€15.99</h2>
+          <h2 class="card-product-pricing">€15.99</h2>
         </div>
       </div>
     </li>
     <li>
-      <div class="card-trip">
+      <div class="card-product">
         <img src="<%= image_path "capy3.jpg"%>" />
-        <div class="card-trip-infos">
+        <div class="card-product-infos">
           <div>
             <h2>Title here</h2>
             <p>Short description here!</p>
           </div>
-          <h2 class="card-trip-pricing">€50</h2>
+          <h2 class="card-product-pricing">€50</h2>
         </div>
       </div>
     </li>
   </ul>
+  <script>
+    ScrollReveal().reveal('.section-headline');
+		ScrollReveal().reveal('.card-product');
+	</script>
 </div>

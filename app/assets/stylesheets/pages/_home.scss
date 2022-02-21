@@ -3,7 +3,9 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FF9F45;;
+  margin: 20px;
+  background-color: transparent;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,22 +19,22 @@
 
 .banner {
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   padding: 100px 0;
-  height: 500px;
-
+  height: 600px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
+  font-size: 48px;
   font-weight: bold;
+  font-family: 'Montserrat';
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 36px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -40,35 +42,36 @@
 .container h1 p {
   margin-top: 20px;
 
+
 }
 // Cards
 
-.card-trip {
+.card-product {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-product > img {
   height: 200px;
   width: 400px;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-product h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-product p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.card-product .card-product-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -76,14 +79,14 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-product-infos .card-product-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
 .cards {
-  margin-top: 100px;
+  margin-right: 16px;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -92,5 +95,20 @@
 // Body
 body {
   background-color: #FF9F45;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
+}
+.section-headline {
+  display: flex;
+  font-size: 24px;
+  color: white;
+  justify-content: center;
+  font-weight: lighter;
+  font-family: 'Montserrat';
+  padding: 24px;
+  background-color: black;
+  opacity: 0.4;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+.btn-lg {
+  color: white;
 }

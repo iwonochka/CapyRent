@@ -1,1 +1,96 @@
 // Specific CSS for your home-page
+// Navbar design
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #FF9F45;;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+//Banner design:
+
+.banner {
+  background-size: cover;
+  background-position: bottom;
+  padding: 100px 0;
+  height: 500px;
+
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.container h1 p {
+  margin-top: 20px;
+
+}
+// Cards
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+.cards {
+  margin-top: 100px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  list-style-type: none;
+}
+// Body
+body {
+  background-color: #FF9F45;
+  font-family: Montserrat;
+}

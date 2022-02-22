@@ -1,0 +1,8 @@
+<h1>Add a capybara you would like to rent:</h1>
+
+<%= simple_form_for(@capybara) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+    <%= f.input :price %>
+  <%= f.submit %>
+<% end %>

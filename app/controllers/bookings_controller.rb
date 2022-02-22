@@ -1,11 +1,19 @@
 class BookingsController < ApplicationController
 
   def new
-    @bookings = Booking.new
+    @booking = Booking.new
   end
 
   def create
-    @bookings = Booking.new(booking_params)
+    @booking = Booking.new(booking_params)
+    @capybara = Capybara.find(params[:capybara_id])
+    @booking.capybara = @capybara
+
+    if @booking.save
+      redirect_to capybaras_path
+    else
+      render :new
+    end
   end
 
   private

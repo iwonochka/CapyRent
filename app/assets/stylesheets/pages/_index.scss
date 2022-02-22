@@ -1,2 +1,41 @@
 // Import page-specific CSS files here.
 @import "home";
+// Navbar design
+
+//page design
+body {
+  background-color: #FFBC80;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+h1 {
+margin: 0;
+color: white;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+font-size: 30px;
+font-weight: bold;
+font-family: 'Montserrat'
+}
+
+.headline-index {
+  display: flex;
+  font-size: 24px;
+  color: white;
+  justify-content: left;
+  font-weight: lighter;
+  font-family: 'Montserrat';
+  padding: 18px;
+  background-color: black;
+  opacity: 0.4;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+}
+
+.cards-container {
+  padding-top: 32px;
+  display: block
+}
+
+.cards {
+
+}

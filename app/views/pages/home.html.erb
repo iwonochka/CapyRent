@@ -1,2 +1,76 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="<%= image_path "capy-logo.png"%>" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Register</a>
+              <a class="dropdown-item" href="#">Log in</a>
+              <a class="dropdown-item" href="#">My Profile</a>
+              <a class="dropdown-item" href="#">Rent out your capybara</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= image_path "banner.jpg"%>);">
+  <div class="container">
+    <h1> <strong>CapyRent</strong></h1>
+    <p>Rent your friendly capybara!</p>
+    <a class="btn btn-success btn-lg" href="#">Meet your new fluffy friend!</a>
+  </div>
+</div>
+<div class=>
+  <h2 class='section-headline'>Cutest capybaras from your area:</h2>
+  <ul class="cards">
+    <li>
+      <div class="card-product">
+        <img src="<%= image_path "capy1.jpg"%>" />
+        <div class="card-product-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-product-pricing">€29.99</h2>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-product">
+        <img src="<%= image_path "capy2.jpg"%>" />
+        <div class="card-product-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-product-pricing">€15.99</h2>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-product">
+        <img src="<%= image_path "capy3.jpg"%>" />
+        <div class="card-product-infos">
+          <div>
+            <h2>Title here</h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-product-pricing">€50</h2>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <script>
+    ScrollReveal().reveal('.section-headline');
+		ScrollReveal().reveal('.card-product');
+	</script>
+</div>

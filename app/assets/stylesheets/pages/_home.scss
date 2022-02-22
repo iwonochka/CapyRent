@@ -1,4 +1,7 @@
 // Specific CSS for your home-page
+@import "../components/_navbar";
+@import "../components/_card";
+
 
 // Body
 body {
@@ -6,21 +9,6 @@ body {
   font-family: 'Montserrat';
 }
 
-// Navbar design
-.navbar-lewagon {
-  justify-content: space-between;
-  background-color: transparent;
-  padding: 0px;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 64px;
-  border-radius: 50%;
-}
 //Banner design:
 .banner {
   background-size: cover;
@@ -66,49 +54,6 @@ body {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
-// Cards design
-.card-product {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.card-product > img {
-  height: 200px;
-  width: 400px;
-  object-fit: cover;
-}
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-product-infos .card-product-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
 .cards {
-  margin-right: 16px;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  list-style-type: none;
+  margin-top: 24px;
 }

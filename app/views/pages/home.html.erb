@@ -29,10 +29,9 @@
     <a class="btn btn-success btn-lg" href="#">Meet your new fluffy friend!</a>
   </div>
 </div>
-<div class=>
+<div class="cards-conatiner">
   <h2 class='section-headline'>Cutest capybaras from your area:</h2>
-  <ul class="cards">
-    <li>
+  <div class="cards">
       <div class="card-product">
         <img src="<%= image_path "capy1.jpg"%>" />
         <div class="card-product-infos">
@@ -43,8 +42,6 @@
           <h2 class="card-product-pricing">€29.99</h2>
         </div>
       </div>
-    </li>
-    <li>
       <div class="card-product">
         <img src="<%= image_path "capy2.jpg"%>" />
         <div class="card-product-infos">
@@ -55,8 +52,6 @@
           <h2 class="card-product-pricing">€15.99</h2>
         </div>
       </div>
-    </li>
-    <li>
       <div class="card-product">
         <img src="<%= image_path "capy3.jpg"%>" />
         <div class="card-product-infos">
@@ -67,8 +62,9 @@
           <h2 class="card-product-pricing">€50</h2>
         </div>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
+   
   <!-- JS animations -->
   <script>
     ScrollReveal().reveal('.section-headline');

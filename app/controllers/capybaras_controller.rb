@@ -13,6 +13,8 @@ class CapybarasController < ApplicationController
 
   def create
     @capybara = Capybara.new(capybara_params)
+    @capybara.user = current_user
+
 
     if @capybara.save
       redirect_to @capybara, notice: 'New Capybara was successfully created.'

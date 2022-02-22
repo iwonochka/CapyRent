@@ -1,0 +1,20 @@
+.booking-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 2px;
+  width: 80%;
+  margin: auto;
+}
+.booking-form {
+  padding: 20px;
+  background-color: rgb(218, 211, 211);
+}
+.description {
+  width: 80%;
+  margin:auto;
+  background-color: white;
+  padding: 24px;
+}

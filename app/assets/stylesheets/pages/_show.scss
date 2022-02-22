@@ -1,20 +1,24 @@
-.booking-container {
+.product-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 24px;
-  background-color: white;
+  padding: 32px;
   box-shadow: 2px;
-  width: 80%;
   margin: auto;
+  position: relative
 }
 .booking-form {
   padding: 20px;
-  background-color: rgb(218, 211, 211);
+
 }
-.description {
-  width: 80%;
-  margin:auto;
-  background-color: white;
-  padding: 24px;
+
+.product-picture {
+height: 25vw;
+width: 40vw;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+object-fit: cover;
+}
+.name h1 {
+  position: absolute;
+  top:32px;
 }

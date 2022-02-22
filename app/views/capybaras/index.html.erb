@@ -22,14 +22,52 @@
     </div>
   </div>
 </div>
-<h1>Rent a capybara for the day!</h1>
+<h2 class='headline-index section-headline'>Meet the capybaras:</h2>
 <div class="cards-container">
-  <ul class="cards">
+  <div class="cards">
+
+    <div class="card-product">
+      <img src="<%= image_path "capy2.jpg"%>" />
+      <div class="card-product-infos">
+        <div>
+          <h2>capybara.name</h2>
+          <p>capybara.description</p>
+        </div>
+        <h2 class="card-product-pricing">capybara.price</h2>
+      </div>
+    </div>
+
+    <div class="card-product">
+      <img src="<%= image_path "capy2.jpg"%>" />
+      <div class="card-product-infos">
+        <div>
+          <h2>capybara.name</h2>
+          <p>capybara.description</p>
+        </div>
+        <h2 class="card-product-pricing">capybara.price</h2>
+      </div>
+    </div>
+
+    <div class="card-product">
+      <img src="<%= image_path "capy2.jpg"%>" />
+      <div class="card-product-infos">
+        <div>
+          <h2>capybara.name</h2>
+          <p>capybara.description</p>
+        </div>
+        <h2 class="card-product-pricing">capybara.price</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
     <% @capybaras.each do |capybara| %>
       <li>
         <div class="card-product">
           <img src="<%= image_path "capy1.jpg"%>">
-            <div class="card-product-infos">                <div>
+            <div class="card-product-infos">
               <h2>CAPYNAME</h2>
               <p>CAPYDESCRIPTION</p>
             </div>
@@ -38,9 +76,3 @@
         </div>
       </li>
     <% end %>
-  </ul>
-</div>
-
-<div class="card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
-          Rio
-        </div>

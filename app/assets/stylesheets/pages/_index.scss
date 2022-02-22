@@ -1,51 +1,41 @@
 // Import page-specific CSS files here.
 @import "home";
 // Navbar design
-.navbar-lewagon {
-  justify-content: space-between;
-  background-color: transparent;
-  padding: 0px;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 64px;
-  border-radius: 50%;
-}
 
 //page design
 body {
-  background-color: #FF9F45;
+  background-color: #FFBC80;
   font-family: 'Montserrat';
   margin: 0;
 }
 
-div {
-  display: block;
+h1 {
+margin: 0;
+color: white;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+font-size: 30px;
+font-weight: bold;
+font-family: 'Montserrat'
 }
 
-.cards-container .cards {
-  flex-grow: 1;
-  padding: 16px;
+.headline-index {
+  display: flex;
+  font-size: 24px;
+  color: white;
+  justify-content: left;
+  font-weight: lighter;
+  font-family: 'Montserrat';
+  padding: 18px;
+  background-color: black;
+  opacity: 0.4;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
 }
 
-@media (max-width: 768px) {
+.cards-container {
+  padding-top: 32px;
+  display: block
+}
+
 .cards {
-    grid-template-columns: 1fr;
-}
-}
 
-@media (max-width: 992px) {
-.cards {
-    grid-template-columns: 1fr 1fr;
-}
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
 }

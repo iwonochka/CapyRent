@@ -23,6 +23,6 @@ class CapybarasController < ApplicationController
   private
 
   def capybara_params
-    arams.require(:capybara).permit(:name, :description)
+    params.require(:capybara).permit(:name, :description)
   end
 end

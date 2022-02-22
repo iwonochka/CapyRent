@@ -1,3 +1,22 @@
-<h2><%= @capybara.name %></h2>
+<h1>Hello! I'm <%= @capybara.name %></h1>
 
+<div class="booking-container">
+  <img src="<%= image_path "capy1.jpg"%>" width="500" height="300">
+  <div class="booking-form">
+    <form class="form-horizontal">
+
+    <legend>Book this fluff!</legend>
+
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="bookdate">Date</label>
+      <div class="col-md-8">
+      <input id="bookdate" name="bookdate" type="text" placeholder="date" class="form-control input-md" required="">
+      </div>
+    </div>
+    <a class="booking-button btn btn-success" href="#">Book now</a>
+  </div>
+</div>
+<div class="description">
+  <p>Name:<%= @capybara.name %></p>
   <p>Description: <%= @capybara.description %></p>
+</div>

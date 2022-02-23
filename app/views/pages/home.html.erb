@@ -12,10 +12,10 @@
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Register</a>
-              <a class="dropdown-item" href="#">Log in</a>
+              <a class="dropdown-item" href="<%=new_user_registration_path%>">Register</a>
+              <a class="dropdown-item" href="<%= new_user_session_path%>">Log in</a>
               <a class="dropdown-item" href="#">My Profile</a>
-              <a class="dropdown-item" href="#">Rent out your capybara</a>
+              <a class="dropdown-item" href="<%= new_capybara_path%>">Rent out your capybara</a>
             </div>
           </li>
       </ul>
@@ -26,19 +26,19 @@
   <div class="container">
     <h1> <strong>CapyRent</strong></h1>
     <p>Rent your friendly capybara!</p>
-    <a class="btn btn-success btn-lg" href="#">Meet your new fluffy friend!</a>
+    <a class="btn btn-success btn-lg" href="<%=capybaras_path%>">Meet your new fluffy friend!</a>
   </div>
 </div>
 <div class="cards-conatiner">
   <h2 class='section-headline'>Cutest capybaras from your area:</h2>
   <div class="cards">
-      <div class="card-product">
-        <img src="<%= image_path "capy1.jpg"%>" />
-        <div class="card-product-infos">
-          <div>
-            <h2>Title here</h2>
-            <p>Short description here!</p>
-          </div>
+    <div class="card-product">
+      <img src="<%= image_path "capy1.jpg"%>" />
+      <div class="card-product-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Short description here!</p>
+        </div>
           <h2 class="card-product-pricing">€29.99</h2>
         </div>
       </div>
@@ -49,7 +49,9 @@
             <h2>Title here</h2>
             <p>Short description here!</p>
           </div>
-          <h2 class="card-product-pricing">€15.99</h2>
+          <div>
+            <h2 class="card-product-pricing">€15.99</h2>
+          </div>
         </div>
       </div>
       <div class="card-product">
@@ -64,7 +66,6 @@
       </div>
     </div>
   </div>
-   
   <!-- JS animations -->
   <script>
     ScrollReveal().reveal('.section-headline');

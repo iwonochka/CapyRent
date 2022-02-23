@@ -8,6 +8,7 @@ class CapybarasController < ApplicationController
 
   def show
     @capybara = Capybara.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

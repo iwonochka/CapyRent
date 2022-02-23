@@ -1,27 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="<%= image_path "capy-logo.png"%>" />
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<%=new_user_registration_path%>">Register</a>
-              <a class="dropdown-item" href="<%= new_user_session_path%>">Log in</a>
-              <a class="dropdown-item" href="#">My Profile</a>
-              <a class="dropdown-item" href="<%= new_capybara_path%>">Rent out your capybara</a>
-            </div>
-          </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render 'components/navbar' %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(<%= image_path "banner.jpg"%>);">
   <div class="container">
     <h1> <strong>CapyRent</strong></h1>

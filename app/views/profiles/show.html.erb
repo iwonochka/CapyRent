@@ -1,0 +1,19 @@
+<%= render 'components/navbar' %>
+<h2 class='headline-index section-headline'>You are logged in as <%=@user.username%> (<%=@user.email%>)</h2>
+</div>
+
+<div>
+  <div class="dashboard">
+    <h1>Your capybaras:</h1>
+    <ul>
+    <% @capybaras.each do |capybara| %>
+      <li><%=capybara.name%></li>
+    <% end %>
+    <h1>Your bookings:</h1>
+    <ul>
+    <% @bookings.each do |booking| %>
+      <li><%=booking.date%></li>
+      <li><%=booking.capybara.name%></li>
+    <% end %>
+    </ul>
+  </div>

@@ -1,4 +1,4 @@
-<%= render 'components/_navbar' %>
+<%= render 'components/navbar' %>
 <h2 class='headline-index section-headline'>Meet the capybaras:</h2>
 
 <div class=" product-container">
@@ -12,7 +12,6 @@
 
    <div class="booking-form">
     <%= simple_form_for [@capybara, @booking] do |f| %>
-      raise!
       <%= f.input :date %>
       <div class="booking-button btn btn-success"><%= f.submit %></div>
     <% end %>

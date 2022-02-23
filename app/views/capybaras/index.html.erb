@@ -1,55 +1,23 @@
+
+
 <%= render 'components/navbar' %>
 <h2 class='headline-index section-headline'>Meet the capybaras:</h2>
+
 <div class="cards-container">
   <div class="cards">
 
-    <div class="card-product">
-      <img src="<%= image_path "capy2.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>capybara.name</h2>
-          <p>capybara.description</p>
+    <% @capybaras.each do |capybara| %>
+      <div class="card-product">
+        <img src="<%= image_path "capy2.jpg"%>" />
+        <div class="card-product-infos">
+          <div>
+            <h2><%= capybara.name %></h2>
+            <p><%= capybara.description[0,45] + "..." %></p>
+          </div>
+          <h2 class="card-product-pricing"><%= capybara.price %></h2>
         </div>
-        <h2 class="card-product-pricing">capybara.price</h2>
       </div>
-    </div>
-
-    <div class="card-product">
-      <img src="<%= image_path "capy2.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>capybara.name</h2>
-          <p>capybara.description</p>
-        </div>
-        <h2 class="card-product-pricing">capybara.price</h2>
-      </div>
-    </div>
-
-    <div class="card-product">
-      <img src="<%= image_path "capy2.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>capybara.name</h2>
-          <p>capybara.description</p>
-        </div>
-        <h2 class="card-product-pricing">capybara.price</h2>
-      </div>
-    </div>
+    <% end %>
 
   </div>
 </div>
-
-
-    <% @capybaras.each do |capybara| %>
-      <li>
-        <div class="card-product">
-          <img src="<%= image_path "capy1.jpg"%>">
-            <div class="card-product-infos">
-              <h2>CAPYNAME</h2>
-              <p>CAPYDESCRIPTION</p>
-            </div>
-              <h2 class="card-product-pricing">CAPYPRICE</h2>
-            </div>
-        </div>
-      </li>
-    <% end %>

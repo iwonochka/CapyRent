@@ -18,6 +18,7 @@ class CapybarasController < ApplicationController
   def create
     @capybara = Capybara.new(capybara_params)
     @capybara.user = current_user
+    raise
 
 
     if @capybara.save
@@ -29,6 +30,6 @@ class CapybarasController < ApplicationController
   private
 
   def capybara_params
-    params.require(:capybara).permit(:name, :description)
+    params.require(:capybara).permit(:name, :description, :price, :photo)
   end
 end

@@ -30,7 +30,8 @@
       <%= f.input :name %>
       <%= f.input :description %>
         <%= f.input :price %>
-      <div class="booking-button btn btn-success"<%= f.submit %>>Add your capybara </div>
+       <%= f.input :photo, as: :file %>
+      <%= f.submit 'Add your capybara', class: "booking-button btn btn-success"%>
     <% end %>
   </div>
   <img src="<%= image_path "capy4.jpg"%>" class="product-picture">

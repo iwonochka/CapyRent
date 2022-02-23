@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :capybaras, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:new, :create]
   end
+  get "profile", to: "profiles#show", as: 'profile'
 end

@@ -12,10 +12,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "profile-pic.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Rent out your capybara", "#", class: "dropdown-item" %>
+              <%= link_to "My Profile", profile_path, class: "dropdown-item" %>
+              <%= link_to "Rent out your capybara", new_capybara_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
@@ -23,10 +23,10 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Register", "#", class: "dropdown-item" %>
-              <%= link_to "Log in", "#", class: "dropdown-item" %>
-              <%= link_to "My Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Rent out your capybara", "#", class: "dropdown-item" %>
+              <%= link_to "Register", new_user_session_path , class: "dropdown-item" %>
+              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+              <%= link_to "My Profile", profile_path, class: "dropdown-item" %>
+              <%= link_to "Rent out your capybara", new_capybara_path, class: "dropdown-item" %>
             </div>
           </li>
         <% end %>

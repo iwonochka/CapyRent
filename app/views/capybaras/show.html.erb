@@ -13,7 +13,7 @@
    <div class="booking-form">
     <%= simple_form_for [@capybara, @booking] do |f| %>
       <%= f.input :date %>
-      <div class="booking-button btn btn-success"><%= f.submit %></div>
+      <%= f.submit 'Book now', class: "booking-button btn btn-success"%>
     <% end %>
   </div>
 </div>

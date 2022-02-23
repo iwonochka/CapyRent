@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.capybara = @capybara
     @booking.user = current_user
     if @booking.save
-      redirect_to capybaras_path
+      redirect_to profile_path
     else
       render :new
     end

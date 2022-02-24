@@ -2,11 +2,20 @@ class CapybarasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+
     if params[:query].present?
       @capybaras = Capybara.search_by_name_and_address(params[:query])
     else
       @capybaras = Capybara.all
     end
+
+    @markers = @capybaras.geocoded.map do |capybara|
+      {
+        lat: capybara.latitude,
+        lng: capybara.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { capybara: capybara }),
+        image_url: helpers.asset_url("capy-marker.png")
+      }
   end
 
   def show
@@ -28,6 +37,7 @@ class CapybarasController < ApplicationController
       render :new
     end
   end
+
   private
 
   def capybara_params

@@ -24,16 +24,19 @@
 
     <% @capybaras.each do |capybara| %>
       <div class="card-product">
-        <img src="<%= image_path "capy2.jpg"%>" />
+        <%= cl_image_tag capybara.photo.key %>
         <div class="card-product-infos">
           <div>
             <h2><%= capybara.name %></h2>
             <p><%= capybara.description[0,45] + "..." %></p>
           </div>
-          <h2 class="card-product-pricing"><%= capybara.price %></h2>
+          <h2 class="card-product-pricing"><%= capybara.price.to_s + "€ /day" %></h2>
         </div>
       </div>
     <% end %>
-
   </div>
+  <div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

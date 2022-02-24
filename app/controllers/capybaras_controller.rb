@@ -2,9 +2,9 @@ class CapybarasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @capybaras = Capybara.geocoded
+    @capybaras = Capybara.all
 
-    @markers = @capybaras.map do |capybara|
+    @markers = @capybaras.geocoded.map do |capybara|
       {
         lat: capybara.latitude,
         lng: capybara.longitude,

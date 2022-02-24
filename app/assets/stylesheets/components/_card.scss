@@ -2,12 +2,11 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: min(20px)
 }
 
 .card-product > img {
   height: 200px;
-  width: 400px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -38,10 +37,15 @@
   width: 40px;
 }
 .cards {
-  margin: 24px;
   justify-content: space-evenly;
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   flex-wrap: wrap;
-  grid-gap: 8px;
+  flex-grow: 1;
+  margin: 0 32px;
+}
+.card-product-image {
+
 }

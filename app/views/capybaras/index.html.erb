@@ -10,7 +10,7 @@
           class: "form-control",
           placeholder: "Find a capybara"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "btn btn-success btn-lg" %>
       <% end %>
 
 
@@ -23,7 +23,7 @@
   <div class="cards">
 
     <% @capybaras.each do |capybara| %>
-      <%= link_to capybara_path(capybara) do %>
+      <%= link_to capybara_path(capybara), class: "capybara-link" do %>
       <div class="card-product">
         <%= cl_image_tag capybara.photo.key %>
         <div class="card-product-infos">

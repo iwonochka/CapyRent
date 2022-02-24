@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
     @booking.capybara = @capybara
     @booking.user = current_user
     if @booking.save
+      flash[:alert] = "Capybara successfully booked"
       redirect_to profile_path
     else
       render :new

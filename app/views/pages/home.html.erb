@@ -12,38 +12,19 @@
 
   <div class="cards">
 
-    <div class="card-product">
-      <img src="<%= image_path "capy1.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>Capper</h2>
-          <p>Always smiling, always happy</p>
+    <% @capybaras.each do |capybara| %>
+      <div class="card-product">
+        <%= cl_image_tag capybara.photo.key %>
+        <div class="card-product-infos">
+          <div>
+            <h2><%= capybara.name %></h2>
+            <p><%= capybara.description[0,45] + "..." %></p>
+          </div>
+          <h2 class="card-product-pricing"><%= capybara.price.to_s + "€ /day" %></h2>
         </div>
-        <h2 class="card-product-pricing">€29.99</h2>
       </div>
-    </div>
+    <% end %>
 
-    <div class="card-product">
-      <img src="<%= image_path "capy2.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>The Cap</h2>
-          <p>A bit stubburn, but lovable anyways</p>
-        </div>
-        <h2 class="card-product-pricing">€15.99</h2>
-      </div>
-    </div>
-
-    <div class="card-product">
-      <img src="<%= image_path "capy3.jpg"%>" />
-      <div class="card-product-infos">
-        <div>
-          <h2>Tommy and Pam</h2>
-          <p>Rent capybara, get cat for free</p>
-        </div>
-        <h2 class="card-product-pricing">€50</h2>
-      </div>
-    </div
   </div>
   <!-- JS animations -->
   <script>

@@ -1,9 +1,17 @@
 class CapybarasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
     @capybaras = Capybara.all
+
+    @markers = @capybaras.geocoded.map do |capybara|
+      {
+        lat: capybara.latitude,
+        lng: capybara.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { capybara: capybara }),
+        image_url: helpers.asset_url("capy-marker.png")
+      }
+    end
   end
 
   def show
@@ -25,6 +33,7 @@ class CapybarasController < ApplicationController
       render :new
     end
   end
+
   private
 
   def capybara_params

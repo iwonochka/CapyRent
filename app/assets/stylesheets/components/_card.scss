@@ -1,8 +1,14 @@
 .card-product {
+  a {
+    color: black;
+    text-decoration: none;
+  }
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: min(20px)
+  margin: min(20px);
+  color: black;
+  text-decoration: none;
 }
 
 .card-product > img {
@@ -15,12 +21,21 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: black;
+  text-decoration: none;
 }
 
 .card-product p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.card-product a {
+  color: black;
+  text-decoration: none;
 }
 
 .card-product .card-product-infos {
@@ -29,6 +44,8 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  color: black;
+  text-decoration: none;
 }
 
 .card-product-infos .card-product-user {
@@ -36,6 +53,8 @@
   right: 16px;
   top: -20px;
   width: 40px;
+  color: black;
+  text-decoration: none;
 }
 .cards {
   margin: 24px;
@@ -44,4 +63,10 @@
   display: flex;
   flex-wrap: wrap;
   grid-gap: 8px;
+  color: black;
+  text-decoration: none;
+}
+
+.capybara-link {
+  text-decoration: none;
 }

@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
 
   def home
-    @capybaras = Capybara.all
+    @capybaras = Capybara.all.first(3)
   end
 
   private

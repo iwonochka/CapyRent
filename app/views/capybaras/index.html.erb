@@ -1,18 +1,36 @@
 <%= render 'components/navbar' %>
 <h2 class='headline-index section-headline'>Meet the capybaras:</h2>
+<div class="container">
+  <div class="row justify-content-center mt-2">
+    <div class="col-sm-8">
+
+      <%= form_tag capybaras_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a capybara"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="cards-container">
   <div class="cards">
 
     <% @capybaras.each do |capybara| %>
       <div class="card-product">
-        <img src="<%= image_path "capy2.jpg"%>" />
+        <%= cl_image_tag capybara.photo.key %>
         <div class="card-product-infos">
           <div>
             <h2><%= capybara.name %></h2>
             <p><%= capybara.description[0,45] + "..." %></p>
           </div>
-          <h2 class="card-product-pricing"><%= capybara.price %></h2>
+          <h2 class="card-product-pricing"><%= capybara.price.to_s + "€ /day" %></h2>
         </div>
       </div>
     <% end %>

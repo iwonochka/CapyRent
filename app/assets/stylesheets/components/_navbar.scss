@@ -14,5 +14,14 @@
 }
 
 .links {
- justify-content: right;
+  a {
+    color: white;
+    font-weight: lighter;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  width: 100%;
+  padding-left: 72%;
+  justify-content: right;
 }

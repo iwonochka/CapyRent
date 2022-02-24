@@ -1,9 +1,12 @@
 class CapybarasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
-    @capybaras = Capybara.all
+    if params[:query].present?
+      @capybaras = Capybara.search_by_name_and_address(params[:query])
+    else
+      @capybaras = Capybara.all
+    end
   end
 
   def show

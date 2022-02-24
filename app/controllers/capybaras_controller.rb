@@ -2,7 +2,6 @@ class CapybarasController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-
     if params[:query].present?
       @capybaras = Capybara.search_by_name_and_address(params[:query])
     else
@@ -16,6 +15,7 @@ class CapybarasController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { capybara: capybara }),
         image_url: helpers.asset_url("capy-marker.png")
       }
+    end
   end
 
   def show

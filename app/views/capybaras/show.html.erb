@@ -13,12 +13,15 @@
   <div class="name">
     <h1>More about <%= @capybara.name %>:</h1>
     <p><%= @capybara.description %></p>
+    <p>Price: <%= @capybara.price %> €/day</p>
+    <p>Where? <%= @capybara.address %></p>
+    <a class="back-button btn btn-success" href="<%= capybaras_path %>">Back to all capybaras</a>
   </div>
 
    <div class="booking-form">
     <%= simple_form_for [@capybara, @booking] do |f| %>
       <%= f.input :date, html5: true %>
-      <%= f.submit 'Book now', class: "booking-button btn btn-success btn-lg"%>
+      <%= f.submit 'Book now', class: "booking-button btn btn-success"%>
     <% end %>
   </div>
 </div>

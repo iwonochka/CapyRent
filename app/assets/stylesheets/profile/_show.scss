@@ -1,0 +1,28 @@
+.profile-layout {
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 32px;
+  box-shadow: 2px;
+  margin: auto;
+  position: relative;
+}
+
+.picture-frame {
+
+}
+
+.profile-picture {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border: 6px #99714C;
+}
+
+.capybara-link {
+  text-decoration: none;
+  color: black;
+}
+
+.capybara-link:hover {
+  color: #99714C;
+}

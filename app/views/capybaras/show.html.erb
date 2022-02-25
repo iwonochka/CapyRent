@@ -1,14 +1,12 @@
 <%= render 'components/navbar' %>
 <h2 class='headline-index section-headline'>Meet the capybaras: <span class="showpage-title">Hello! I'm <%= @capybara.name %></span></h2>
 
-<div class=" product-container">
-
-
-<%if @capybara.photo.attached? %>
-  <%= cl_image_tag(@capybara.photo.key, class: 'product-picture') %>
-<% else %>
-  <%= image_tag("capy1.jpg", class: 'product-picture' ) %>
-<% end %>
+<div class="product-container">
+  <%if @capybara.photo.attached? %>
+    <%= cl_image_tag(@capybara.photo.key, class: 'product-picture') %>
+  <% else %>
+    <%= image_tag("capy1.jpg", class: 'product-picture' ) %>
+  <% end %>
 
   <div class="name">
     <h1>Hello! I'm <%= @capybara.name %></h1>

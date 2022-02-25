@@ -2,18 +2,33 @@
 <h2 class='headline-index section-headline'>You are logged in as <%=@user.username%> (<%=@user.email%>)</h2>
 </div>
 
-<div>
-  <div class="dashboard">
+<div class="profile-layout">
+
+  <div class="picture-frame">
+    <div class="profile-picture">
+      <%= image_tag "user1" %>
+    </div>
+    <p>change profile picture</p>
+  </div>
+
+  <div class="your-capys">
     <h1>Your capybaras:</h1>
     <ul>
-    <% @capybaras.each do |capybara| %>
-      <li><%=capybara.name%></li>
-    <% end %>
+      <% @capybaras.each do |capybara| %>
+        <li><%= link_to capybara.name, capybara_path(capybara.id), class: "capybara-link" %></li>
+      <% end %>
+    </ul>
+    <p>edit</p>
+  </div>
+
+  <div class="your-bookings">
     <h1>Your bookings:</h1>
     <ul>
-    <% @bookings.each do |booking| %>
-      <li><%=booking.date%></li>
-      <li><%=booking.capybara.name%></li>
-    <% end %>
+      <% @bookings.each do |booking| %>
+        <li><%=booking.date%>: <%= link_to booking.capybara.name, capybara_path(booking.capybara.id), class: "capybara-link" %></li>
+      <% end %>
     </ul>
+    <p>edit</p>
   </div>
+
+</div>

@@ -6,7 +6,7 @@
 
   <div class="picture-frame">
     <div class="profile-picture">
-      <%= image_tag "user1" %>
+      <%= cl_image_tag current_user.photo.key %>
     </div>
     <p>Capybara-Fan <%=@user.username%></p>
     <div class="edit">

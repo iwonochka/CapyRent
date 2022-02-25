@@ -7,15 +7,17 @@
   box-shadow: 2px;
   margin: auto;
   position: relative;
+  align-items: center;
 }
 
 .picture-frame {
-
-}
-
-.profile-picture {
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  border: 6px #99714C;
+  justify-content: center;
+  height: 25vw;
+  width: 20vw;
+  text-align: center;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
 }
 
 .capybara-link {
@@ -25,4 +27,35 @@
 
 .capybara-link:hover {
   color: #99714C;
+}
+
+.your-capys {
+  justify-content: left;
+  height: 25vw;
+  width: 20vw;
+  text-align: left;
+  border-width: 6px;
+  border-color: black;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
+}
+
+.your-bookings {
+  justify-content: left;
+  height: 25vw;
+  width: 20vw;
+  text-align: left;
+  border-width: 6px;
+  border-color: black;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
+}
+
+.edit {
+  font-size: smaller;
+  position: absolute;
+  text-align: left;
+  padding-bottom: 70px;
 }

@@ -1,22 +1,24 @@
 <%= render 'components/navbar' %>
-<h2 class='headline-index section-headline'>Meet the capybaras: <span class="showpage-title">Hello! I'm <%= @capybara.name %></span></h2>
+<h2 class='headline-index section-headline'> <span class="showpage-title">Hello! I'm <%= @capybara.name %></span></h2>
 
-<div class="product-container">
-  <%if @capybara.photo.attached? %>
-    <%= cl_image_tag(@capybara.photo.key, class: 'product-picture') %>
-  <% else %>
-    <%= image_tag("capy1.jpg", class: 'product-picture' ) %>
-  <% end %>
+<div class=" product-container-profile">
+
+
+<%if @capybara.photo.attached? %>
+  <%= cl_image_tag(@capybara.photo.key, class: 'product-picture-profile') %>
+<% else %>
+  <%= image_tag("capy1.jpg", class: 'product-picture-profile' ) %>
+<% end %>
 
   <div class="name">
-    <h1>Hello! I'm <%= @capybara.name %></h1>
+    <h1>More about <%= @capybara.name %>:</h1>
     <p><%= @capybara.description %></p>
   </div>
 
    <div class="booking-form">
     <%= simple_form_for [@capybara, @booking] do |f| %>
-      <%= f.input :date %>
-      <%= f.submit 'Book now', class: "booking-button btn btn-success"%>
+      <%= f.input :date, html5: true %>
+      <%= f.submit 'Book now', class: "booking-button btn btn-success btn-lg"%>
     <% end %>
   </div>
 </div>

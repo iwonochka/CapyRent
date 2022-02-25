@@ -8,7 +8,10 @@
     <div class="profile-picture">
       <%= image_tag "user1" %>
     </div>
-    <p>change profile picture</p>
+    <p>Capybara-Fan <%=@user.username%></p>
+    <div class="edit">
+      <p>Change profile picture</p>
+    </div>
   </div>
 
   <div class="your-capys">
@@ -18,7 +21,9 @@
         <li><%= link_to capybara.name, capybara_path(capybara.id), class: "capybara-link" %></li>
       <% end %>
     </ul>
-    <p>edit</p>
+    <div class="edit">
+      <p>edit</p>
+    </div>
   </div>
 
   <div class="your-bookings">
@@ -28,7 +33,9 @@
         <li><%=booking.date%>: <%= link_to booking.capybara.name, capybara_path(booking.capybara.id), class: "capybara-link" %></li>
       <% end %>
     </ul>
-    <p>edit</p>
+    <div class="edit">
+      <p>edit</p>
+    </div>
   </div>
 
 </div>

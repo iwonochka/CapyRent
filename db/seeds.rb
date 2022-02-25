@@ -36,7 +36,7 @@ user_6.save!
 
 capybara1 = Capybara.new(
   name: "Capybarack",
-  description: "Great conversational skills, a true expert in current affairs",
+  description: "Great conversational skills, a true expert in current affairs. Born and raised in Hawaii. He graduated from Columbia University and Harvard Law School.",
   price: 40,
   address: "Pariser Platz 2, 10117 Berlin",
   user: user_3
@@ -48,7 +48,7 @@ capybara1.save!
 
 capybara2 = Capybara.new(
   name: "Capyyoda",
-  description: "The greatest capybara, Capyyoda is",
+  description: "Hrrmmm. Truly a a capybara of great power he is. The best time ever you will have. Yes, hrrrm.",
   price: 38,
   address: "Bergmannstraße 25, 10961 Berlin",
   user: user_4
@@ -58,7 +58,7 @@ capybara2.save!
 
 capybara3 = Capybara.new(
   name: "Capinsta",
-  description: "Will show you his best poses, perfect to attract more followers",
+  description: "Will show you his best poses, perfect to attract more followers. No filter needed, best shots guaranteed! Loves belly rubs and pumpkin latte.",
   price: 29,
   address: "Rosenthaler Straße 72, 10119 Berlin",
   user: user_3

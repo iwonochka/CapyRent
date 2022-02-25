@@ -48,7 +48,7 @@ capybara1.save!
 
 capybara2 = Capybara.new(
   name: "Capyyoda",
-  description: "The greatest capybara, Capyyoda is",
+  description: "Hrrmmm. Truly a a capybara of great power he is. The best time ever you will have. Yes, hrrrm.",
   price: 38,
   address: "Bergmannstraße 25, 10961 Berlin",
   user: user_4

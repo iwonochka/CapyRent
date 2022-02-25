@@ -11,10 +11,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 64px;
   border-radius: 50%;
+  align-self: center;
 }
 
 .links {
   a {
+    font-size: 20px;
     color: white;
     // font-weight: lighter;
     font-family: 'Montserrat';

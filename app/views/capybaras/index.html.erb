@@ -13,7 +13,6 @@
         <%= submit_tag "Search", class: "btn btn-success btn-lg" %>
       <% end %>
 
-
       </div>
     </div>
   </div>
@@ -21,7 +20,6 @@
 
 <div class="cards-container">
   <div class="cards">
-
     <% @capybaras.each do |capybara| %>
       <%= link_to capybara_path(capybara), class: "capybara-link" do %>
       <div class="card-product">
@@ -37,8 +35,10 @@
       <% end %>
     <% end %>
   </div>
+
   <div class="map" style="width: 600px; height: 100vh;"
-  data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>

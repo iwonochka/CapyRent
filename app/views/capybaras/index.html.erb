@@ -34,7 +34,7 @@
         <div class="card-product-infos">
           <div>
             <h2><%= capybara.name %></h2>
-            <p><%= capybara.description[0,45] + "..." %></p>
+            <p><%= capybara.description[0,30] + "..." %></p>
           </div>
           <h2 class="card-product-pricing"><%= capybara.price.to_s + "€ /day" %></h2>
         </div>

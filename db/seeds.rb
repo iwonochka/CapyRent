@@ -5,32 +5,32 @@ Capybara.destroy_all
 User.destroy_all
 
 user_1 = User.create!(username: "bob", password: "123456", email: "bob@ilovecapys.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_1.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_1.save!
 
 user_2 = User.create!(username: "helmut", password: "123456", email: "helmut@capysarethebest.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_2.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_2.save!
 
 user_3 = User.create!(username: "gertrude", password: "123456", email: "gertrude@capys.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_3.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_3.save!
 
 user_4 = User.create!(username: "brunhilde", password: "123456", email: "brunhilde@capybaras.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_4.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_4.save!
 
 user_5 = User.create!(username: "hartmut", password: "123456", email: "hartmut@capycapy.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_5.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_5.save!
 
 user_6 = User.create!(username: "hildegard", password: "123456", email: "hildegard@copacabana.com")
-file2 = URI.open('app/assets/images/capy1.jpg')
+file2 = URI.open('app/assets/images/user1.png')
 user_6.photo.attach(io: file2, filename: 'user1.jpg', content_type: 'image/jpg')
 user_6.save!
 

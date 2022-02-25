@@ -1,4 +1,8 @@
-.product-container {
+.showpage-title {
+  margin-left: 56px;
+}
+
+.product-container-profile {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -7,20 +11,15 @@
   margin: auto;
   position: relative
 }
-.booking-form {
-  padding: 20px;
 
-}
-
-.product-picture {
+.product-picture-profile {
 height: 25vw;
 width: 40vw;
 box-shadow: 0 0 15px rgba(0,0,0,0.2);
 object-fit: cover;
 }
 .name h1 {
-  position: absolute;
-  top:32px;
+margin-bottom: 32px;
 }
 
 .flash {
@@ -36,4 +35,15 @@ object-fit: cover;
 
 .flash-success {
   border: 2px solid #1EDD88;
+}
+.name {
+  justify-content: center;
+  height: 25vw;
+  width: 20vw;
+  text-align: center;
+  border-width: 6px;
+  border-color: black;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
 }

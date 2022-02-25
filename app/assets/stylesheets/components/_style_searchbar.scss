@@ -1,0 +1,16 @@
+.style-searchbar {
+
+    background-color: var(--search-box-bg, white);
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    color: var(--search-box-text);
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    outline: none;
+    width: 600px;
+    position: relative;
+    margin-left: 500px;
+
+}

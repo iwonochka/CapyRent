@@ -1,0 +1,61 @@
+.profile-layout {
+  font-family: 'Montserrat';
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 32px;
+  box-shadow: 2px;
+  margin: auto;
+  position: relative;
+  align-items: center;
+}
+
+.picture-frame {
+  justify-content: center;
+  height: 25vw;
+  width: 20vw;
+  text-align: center;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
+}
+
+.capybara-link {
+  text-decoration: none;
+  color: black;
+}
+
+.capybara-link:hover {
+  color: #99714C;
+}
+
+.your-capys {
+  justify-content: left;
+  height: 25vw;
+  width: 20vw;
+  text-align: left;
+  border-width: 6px;
+  border-color: black;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
+}
+
+.your-bookings {
+  justify-content: left;
+  height: 25vw;
+  width: 20vw;
+  text-align: left;
+  border-width: 6px;
+  border-color: black;
+  box-shadow: 2px;
+  padding: 18px;
+  background-color: #ff9f45;
+}
+
+.edit {
+  font-size: smaller;
+  position: absolute;
+  text-align: left;
+  padding-bottom: 70px;
+}

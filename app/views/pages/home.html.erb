@@ -6,9 +6,10 @@
     <a class="btn btn-success btn-lg" href="<%=capybaras_path%>">Meet your new fluffy friend!</a>
   </div>
 </div>
-<div class="cards-container-homepage">
 
   <h2 class='section-headline'>Cutest capybaras from your area:</h2>
+
+<div class="cards-container-homepage">
 
   <div class="cards-home">
 
@@ -18,7 +19,7 @@
         <div class="card-product-infos">
           <div>
             <h2><%= capybara.name %></h2>
-            <p><%= capybara.description[0,45] + "..." %></p>
+            <p><%= capybara.description[0,55] + "..." %></p>
           </div>
           <h2 class="card-product-pricing"><%= capybara.price.to_s + "€ /day" %></h2>
         </div>

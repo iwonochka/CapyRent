@@ -88,3 +88,21 @@
   color: white;
   margin-left: 18px;
 }
+
+.cards-container-homepage {
+display: flex;
+padding-top: 32px;
+margin-bottom: 20px;
+}
+
+.cards-home {
+  margin-top: 24px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin: 0 20px;
+}

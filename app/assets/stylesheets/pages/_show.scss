@@ -9,17 +9,21 @@
   padding: 32px;
   box-shadow: 2px;
   margin: auto;
-  position: relative
+  position: relative;
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 25vw;
+    margin: 1rem;
+    align-content: center;
+    justify-content: space-around;
+    padding: 1.2rem;
+    background: $white;
+  }
 }
-
-.product-picture-profile {
-height: 25vw;
-width: 40vw;
-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-object-fit: cover;
-}
-.name h1 {
-margin-bottom: 32px;
+.capy-icon-form {
+  margin-bottom: 1rem;
 }
 
 .flash {
@@ -27,26 +31,41 @@ margin-bottom: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: $white;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
+  border-radius: $border-radius;
   margin: 8px;
 }
 
 .flash-success {
   border: 2px solid #1EDD88;
 }
-.name {
-  justify-content: center;
+
+.card-show {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #f5f5f5;
+  border-radius: $border-radius;
+  padding: 1rem;
   height: 25vw;
-  width: 20vw;
-  text-align: center;
-  border-width: 6px;
-  border-color: black;
-  box-shadow: 2px;
-  padding: 18px;
-  background-color: $orange;
+  width: auto;
+  h2 {
+    color: $black;
+    margin-bottom: 1rem;
+  }
+  a {
+    color: white;
+  }
 }
-.back-button {
-  color: white;
+.product-picture-profile {
+  height: 22vw;
+  width: 35vw;
+  border-radius: $border-radius;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.card-show-right {
+  padding: 1rem;
 }

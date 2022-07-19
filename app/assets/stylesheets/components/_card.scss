@@ -4,7 +4,7 @@
     text-decoration: none;
   }
   overflow: hidden;
-  background: white;
+  background: $white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   color: black;
@@ -79,13 +79,12 @@
 
 .name {
   h1 {
-    font-family: 'Montserrat';
     font-weight: lighter;
   }
 }
 
 .showpage-title {
-  color: white;
+  color: $white;
   margin-left: 18px;
 }
 

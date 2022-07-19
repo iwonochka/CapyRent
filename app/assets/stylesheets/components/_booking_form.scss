@@ -1,5 +1,5 @@
 .booking-button {
-  color: white !important;
+  color: $white !important;
   margin-top: 156px;
 }
 .booking-form {
@@ -14,8 +14,8 @@
 
 }
 .form-label {
-  font-family: Montserrat;
+  font-family: $body-font;
   font-size: 30px;
-  color: white;
+  color: $white;
   margin-bottom: 32px;
 }

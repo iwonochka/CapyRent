@@ -5,10 +5,10 @@
   text-align:center;
   color: black;
   font-family: $body-font;
-  border-radius: 1rem;
+  border-radius: $border-radius;
   border: 1px solid transparent;
   padding: 1.2rem 1.7rem 1.2rem 1.7rem;
-  background: white;
+  background: $white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   h5 {

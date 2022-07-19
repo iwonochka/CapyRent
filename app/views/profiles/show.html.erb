@@ -5,9 +5,9 @@
 
   <div class="profile-container">
 
-    <div class="profile glass">
+    <div class="profile grid-row-span-2 profile-card">
 
-      <div class="profile-left">
+      <div class="profile-up">
 
         <div class="profile-avatar">
           <%= cl_image_tag current_user.photo.key %>
@@ -15,17 +15,17 @@
 
         <div class="profile-details">
 
-          <h5><%=@user.email%></h5>
-          <p>Size of your capy fleet: <%=@user.capybaras.size%></p>
-          <p>You booked <%=@user.bookings.size%> capybaras so far!</p>
+          <h3><%=@user.email%></h3>
+          <p>Size of your capy fleet: <b><%=@user.capybaras.size%></b></p>
+          <p>You booked <b><%=@user.bookings.size%></b> capybaras so far!</p>
           <% sum = 0 %>
           <% @user.capybaras.each { |capybara| sum += capybara.bookings.size} %>
-          <p>You rented out <%=sum%> capybaras so far!</p>
+          <p>You rented out <b><%=sum%></b> capybaras so far!</p>
         </div>
       </div>
 
       <div class="capybara-details">
-        <h5>Your capybaras:</h5>
+        <h3>Your capybaras:</h3>
         <div class="capybara-icons">
           <% @capybaras.each do |capybara| %>
             <%= link_to capybara_path(capybara), class: "capybara-link" do %>
@@ -37,7 +37,7 @@
 
     </div>
 
-    <div class="manage manage-products">
+    <div class="profile-card manage-products">
       <div class="manage-container">
         <img src="assets/capy-icon.png" alt="capybara icon" width="70" height="70">
         <p>Grow and expand your capybara fleet</p>
@@ -45,7 +45,7 @@
       <a class="btn btn-success btn-lg" href="<%=new_capybara_path%>">Add new capybara</a>
     </div>
 
-    <div class="manage manage-bookings">
+    <div class="profile-card manage-bookings">
       <div class="manage-container">
         <img src="assets/calendar.png" alt="calendar icon" width="70" height="70">
         <p>Get an overview of all your bookings</p>

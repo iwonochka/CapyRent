@@ -6,48 +6,27 @@
 }
 
 .profile-container {
-  background-image: linear-gradient(rgba(231, 164, 120, 0.4),rgba(232, 135, 9, 0.4)), url("nature.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
   display: grid;
-  width: 100%;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  justify-content: space-around;
-  justify-items: stretch;
-  align-items: stretch;
-  grid-template-areas:
-    "profile profile"
-    "manage-products manage-bookings";
+  margin: 2rem 11rem;
+  p {
+    font-size: 16px;
+    margin: 0.5rem;
+  }
 }
 
+.grid-row-span-2 {
+  grid-row: span 2;
+}
 .profile {
-  grid-area: profile;
-  width: 95%;
-  justify-self: center;
-  align-items: self-start;
-  display: flex;
-  justify-content: flex-start;
-  gap: 6rem;
-  padding: 2rem;
-  margin: 2rem 1rem 1rem 1rem;
-  h5 {
+  flex-direction: column;
+  h3 {
     margin: 1rem 0.5rem;
   }
 }
-.glass {
-  background: rgba(255, 241, 223, 0.23);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.3px);
-  -webkit-backdrop-filter: blur(7.3px);
-  border: 1px solid transparent;
-  border-radius: 20px;
-}
-.profile-left {
+
+.profile-up {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -55,53 +34,43 @@
 }
 
 .profile-avatar > img {
-  height: 150px;
-  width: 150px;
+  height: 12vw;
+  width: 12vw;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid rgba(252, 252, 252, 0.503);
 }
 
-.profile-details > p {
-  font-size: 14px;
-  margin: 0.5rem;
-}
 .manage-container {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: white;
+  justify-content: center;
+  text-align: center;
   .btn {
     font-size: 16px;
   }
   img {
-    margin-left: 35%;
     margin-bottom: 1rem;
   }
 }
-.manage {
-  grid-area: manage-products, manage bookings;
-  gap: 3rem;
+.profile-card {
   display: flex;
+  gap: 3rem;
   justify-content: space-around;
-  align-items: flex-end;
-  width: 90%;
+  align-items: center;
   padding: 2rem;
-  margin: 1rem;
-  background: $brown;
   border: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: $border-radius;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  background: $white;
 }
 
-.manage-products {
-  grid-area: manage-products;
-  position: absolute;
-  left: 3%;
-}
-.manage-bookings {
-  grid-area: manage-bookings;
-  position: absolute;
-  right: 3%;
+.capybara-details {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 .capybara-link > img {
   height: 50px;
@@ -110,7 +79,7 @@
   border-radius: 50%;
 }
 .capybara-link > img:hover {
-  border: 2px solid white;
+  border: 2px solid $white;
 }
 
 .capybara-icons {

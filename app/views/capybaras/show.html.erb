@@ -1,24 +1,37 @@
 <%= render 'components/navbar' %>
-<h2 class='headline-index section-headline'> <span class="showpage-title">Hello! I'm <%= @capybara.name %></span></h2>
+<h2 class='section-headline'>Hello! I'm <%= @capybara.name %></h2>
 
 <div class=" product-container-profile">
 
+<div class="card-show">
 
-<%if @capybara.photo.attached? %>
-  <%= cl_image_tag(@capybara.photo.key, class: 'product-picture-profile') %>
-<% else %>
-  <%= image_tag("capy1.jpg", class: 'product-picture-profile' ) %>
-<% end %>
-
-  <div class="name">
-    <h1>More about <%= @capybara.name %>:</h1>
-    <p><%= @capybara.description %></p>
-    <p>Price: <%= @capybara.price %> €/day</p>
-    <p>Where? <%= @capybara.address %></p>
-    <a class="back-button btn btn-success" href="<%= capybaras_path %>">Back to all capybaras</a>
+  <div class="card-show-left">
+    <%if @capybara.photo.attached? %>
+      <%= cl_image_tag(@capybara.photo.key, class: 'product-picture-profile') %>
+    <% else %>
+      <%= image_tag("capy1.jpg", class: 'product-picture-profile' ) %>
+    <% end %>
   </div>
 
-   <div class="booking-form">
+  <div class="card-show-right">
+    <div class="name">
+      <h2>More about <%= @capybara.name %>:</h2>
+      <p><%= @capybara.description %></p>
+      <p>💰 <%= @capybara.price %> €/day</p>
+      <p>📍 <%= @capybara.address %></p>
+      <a class="back-button btn btn-success" href="<%= capybaras_path %>">Back to all capybaras</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+   <div class="form-container">
+    <h3>Rent this fluff!</h3>
+    <div class="capy-icon-form">
+      <img src="../../assets/capy-icon.png" alt="capybara icon" width="70" height="70">
+    </div>
     <%= simple_form_for [@capybara, @booking] do |f| %>
       <%= f.input :date, html5: true %>
       <%= f.submit 'Book now', class: "booking-button btn btn-success"%>

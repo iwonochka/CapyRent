@@ -1,12 +1,12 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
-@import "new";
+@import "booking-index";
 
 // Navbar design
 //page design
 body {
-  background-color: #FFBC80;
+  background-color: $orange;
   font-family: 'Montserrat';
   margin: 0;
 }

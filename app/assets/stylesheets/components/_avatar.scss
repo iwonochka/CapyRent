@@ -4,6 +4,11 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.avatar:hover {
+  cursor: pointer;
+}
+
 .avatar-large {
   width: 56px;
   border-radius: 50%;

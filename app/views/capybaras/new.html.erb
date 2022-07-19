@@ -1,8 +1,7 @@
 <%= render 'components/navbar' %>
-<h2 class='headline-index section-headline'>Share your capybara with the world!</h2>
+<h2 class='section-headline'>Share your capybara with the world!</h2>
 
-<div class="new-capybara-form">
-  <div class="form-centered">
+<div class="form-container new-capybara">
     <%= simple_form_for(@capybara) do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
@@ -10,6 +9,4 @@
        <%= f.input :photo, as: :file %>
       <%= f.submit 'Add your capybara', class: "booking-button btn btn-success"%>
     <% end %>
-  </div>
-  <img src="<%= image_path "capy4.jpg"%>" class="product-picture">
 </div>

@@ -1,61 +1,120 @@
-.profile-layout {
-  font-family: 'Montserrat';
+.profile-wrapper {
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-container {
+  background-image: linear-gradient(rgba(231, 164, 120, 0.4),rgba(232, 135, 9, 0.4)), url("nature.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-content: space-around;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas:
+    "profile profile"
+    "manage-products manage-bookings";
+}
+
+.profile {
+  grid-area: profile;
+  width: 95%;
+  justify-self: center;
+  align-items: self-start;
+  display: flex;
+  justify-content: flex-start;
+  gap: 6rem;
+  padding: 2rem;
+  margin: 2rem 1rem 1rem 1rem;
+  h5 {
+    margin: 1rem 0.5rem;
+  }
+}
+.glass {
+  background: rgba(255, 241, 223, 0.23);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.profile-left {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-avatar > img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(252, 252, 252, 0.503);
+}
+
+.profile-details > p {
+  font-size: 14px;
+  margin: 0.5rem;
+}
+.manage-container {
+  margin: auto;
+  align-items: center;
+  color: white;
+  .btn {
+    font-size: 16px;
+  }
+  img {
+    margin-left: 35%;
+    margin-bottom: 1rem;
+  }
+}
+.manage {
+  grid-area: manage-products, manage bookings;
+  gap: 3rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding: 32px;
-  box-shadow: 2px;
-  margin: auto;
-  position: relative;
-  align-items: center;
+  align-items: flex-end;
+  width: 90%;
+  padding: 2rem;
+  margin: 1rem;
+  background: $brown;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
 }
 
-.picture-frame {
-  justify-content: center;
-  height: 25vw;
-  width: 20vw;
-  text-align: center;
-  box-shadow: 2px;
-  padding: 18px;
-  background-color: #ff9f45;
-}
-
-.capybara-link {
-  text-decoration: none;
-  color: black;
-}
-
-.capybara-link:hover {
-  color: #99714C;
-}
-
-.your-capys {
-  justify-content: left;
-  height: 25vw;
-  width: 20vw;
-  text-align: left;
-  border-width: 6px;
-  border-color: black;
-  box-shadow: 2px;
-  padding: 18px;
-  background-color: #ff9f45;
-}
-
-.your-bookings {
-  justify-content: left;
-  height: 25vw;
-  width: 20vw;
-  text-align: left;
-  border-width: 6px;
-  border-color: black;
-  box-shadow: 2px;
-  padding: 18px;
-  background-color: #ff9f45;
-}
-
-.edit {
-  font-size: smaller;
+.manage-products {
+  grid-area: manage-products;
   position: absolute;
-  text-align: left;
-  padding-bottom: 70px;
+  left: 3%;
+}
+.manage-bookings {
+  grid-area: manage-bookings;
+  position: absolute;
+  right: 3%;
+}
+.capybara-link > img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.capybara-link > img:hover {
+  border: 2px solid white;
+}
+
+.capybara-icons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
 }

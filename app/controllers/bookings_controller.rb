@@ -18,6 +18,10 @@ class BookingsController < ApplicationController
     end
   end
 
+  def index
+    @bookings = Booking.all.select { |booking| booking.user == current_user }
+  end
+
   private
 
   def booking_params

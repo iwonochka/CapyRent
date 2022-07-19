@@ -28,7 +28,7 @@
           <li class="nav-item dropdown">
             <%= image_tag src="avatar_orange.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Register", new_user_session_path , class: "dropdown-item" %>
+              <%= link_to "Register", new_user_registration_path , class: "dropdown-item" %>
               <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <%= link_to "My Profile", profile_path, class: "dropdown-item" %>
               <%= link_to "Rent out your capybara", new_capybara_path, class: "dropdown-item" %>

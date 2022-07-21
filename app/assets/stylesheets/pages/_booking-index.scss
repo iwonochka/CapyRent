@@ -29,13 +29,21 @@
   border-radius: $border-radius;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
   position: relative;
+  p {
+    font-size: 18px;
+  }
+  .capybara-icons > img {
+    height: 62px;
+    width: 62px;
+  }
 }
 
 .corner-icon {
 position: absolute;
-top: -1rem;
-left: -1rem;
+top: -0.5rem;
+left: -0.5rem;
 background-color: $white;
 border-radius: 50%;
-padding: 0.5rem;
+height: 52px;
+width: 52px;
 }

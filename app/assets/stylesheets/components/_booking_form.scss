@@ -1,5 +1,5 @@
 .booking-button {
-  color: white !important;
+  color: $white !important;
   margin-top: 156px;
 }
 .booking-form {
@@ -10,12 +10,12 @@
   border-color: black;
   box-shadow: 2px;
   padding: 18px;
-  background-color: #ff9f45;
+  background-color: $orange;
 
 }
 .form-label {
-  font-family: Montserrat;
+  font-family: $body-font;
   font-size: 30px;
-  color: white;
+  color: $white;
   margin-bottom: 32px;
 }

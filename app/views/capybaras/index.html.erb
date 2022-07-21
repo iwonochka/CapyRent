@@ -1,5 +1,5 @@
 <%= render 'components/navbar' %>
-<h2 class='headline-index section-headline'>Meet the capybaras:</h2>
+<h2 class='section-headline'>Meet the capybaras:</h2>
 <div class="container">
   <div class ="place-search-button" class="row justify-content-center mt-2">
     <div class="col-sm-8">
@@ -29,7 +29,7 @@
   <div class="cards">
     <% @capybaras.each do |capybara| %>
       <%= link_to capybara_path(capybara), class: "capybara-link" do %>
-      <div class="card-product">
+      <div class="card-product" data-aos="fade-up">
         <%= cl_image_tag capybara.photo.key %>
         <div class="card-product-infos">
           <div>

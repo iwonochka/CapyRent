@@ -1,0 +1,42 @@
+.form-container {
+  margin: 4% auto;
+  display: block;
+  width: 20%;
+  text-align:center;
+  color: black;
+  font-family: $body-font;
+  border-radius: $border-radius;
+  border: 1px solid transparent;
+  padding: 1.2rem 1.7rem 1.2rem 1.7rem;
+  background: $white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  h5 {
+    margin-bottom: 2rem;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    font-size: smaller;
+  }
+  a:hover {
+    font-weight: lighter;
+    font-size: larger;
+  }
+  .btn {
+    margin: 1rem 0 1rem 0;
+  }
+
+}
+
+.form-label {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+.form-check {
+  margin: auto auto 0.125rem auto;
+  width: 50%;
+  font-size: smaller;
+}

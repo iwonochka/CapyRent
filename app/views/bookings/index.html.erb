@@ -1,0 +1,20 @@
+<%= render 'components/navbar' %>
+<h2 class='section-headline'>Your bookings:</h2>
+<div class="booking-container">
+  <% @bookings.each do |booking| %>
+    <div class="booking">
+      <div class="booking-header">
+        <img src="assets/termin.png" alt="booking icon" width="70" height="70" class="corner-icon">
+        <%= link_to capybara_path(booking.capybara), class: "capybara-link capybara-icons" do %>
+          <%= cl_image_tag booking.capybara.photo.key %>
+        <% end %>
+
+        <h5><%=booking.capybara.name%></h5>
+      </div>
+
+      <p>Date: <%=booking.date%></p>
+      <p>Price: <%=booking.capybara.price%>€</p>
+
+    </div>
+  <% end %>
+</div>

@@ -1,6 +1,7 @@
 class Capybara < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
+  has_many :bookings
 
   #Enabling search action
   include PgSearch::Model

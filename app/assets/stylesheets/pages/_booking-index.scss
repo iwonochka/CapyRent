@@ -1,0 +1,41 @@
+.booking-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 1rem;
+  width: 60%;
+}
+ .booking-header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 1rem;
+   width: 100%;
+   border-radius: $border-radius;
+   font-weight: 500;
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  background: $white;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.corner-icon {
+position: absolute;
+top: -1rem;
+left: -1rem;
+background-color: $white;
+border-radius: 50%;
+padding: 0.5rem;
+}

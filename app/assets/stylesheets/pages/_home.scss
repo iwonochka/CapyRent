@@ -5,8 +5,7 @@
 
 // Body
 body {
-  background-color: #FF9F45;
-  font-family: 'Montserrat';
+  background-color: $orange;
 }
 
 //Banner design:
@@ -19,16 +18,15 @@ body {
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: $white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 48px;
   font-weight: bold;
-  font-family: 'Montserrat';
 }
 
 .banner p {
   font-size: 36px;
-  color: white;
+  color: $white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
@@ -37,31 +35,41 @@ body {
 }
 
 .btn-lg {
-  color: white;
+  color: $white;
+  transition: 0.5s;
+}
+
+.btn-lg:hover {
+  transform: scale(1.1);
+  color: $white;
+  border: 2px solid $white;
 }
 
 //Section headline
 .section-headline {
   display: flex;
-  font-size: 24px;
-  color: white;
+  height: fit-content;
+  color: $white;
   justify-content: center;
   font-weight: lighter;
-  font-family: 'Montserrat';
-  padding: 24px;
-  background-color: black;
-  opacity: 0.4;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background: rgb(153,113,77);
+  background: radial-gradient(circle, rgba(153,113,77,1) 0%, rgba(101,75,52,1) 100%);
 }
 
-// .cards-home {
-//   margin-top: 24px;
-// }
+/* -------------------MEDIA QUERIES-----------------------*/
 
-// .cards-container-homepage h2 {
-//  margin-bottom: 20px;
-// }
+/* MEDIUM DEVICE*/
+@media screen and (max-width: 1024px) {
 
-// .cards img {
-//   margin-top: 24px;
-// }
+
+}
+
+/* SMALL DEVICE*/
+@media screen and (max-width: 600px) {
+  .cards-home {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

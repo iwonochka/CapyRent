@@ -1,41 +1,57 @@
 <%= render 'components/navbar' %>
-<h2 class='headline-index section-headline'>You are logged in as <%=@user.username%> (<%=@user.email%>)</h2>
+<h2 class='section-headline'>Your profile</h2>
 </div>
+<div class="profile-wrapper">
 
-<div class="profile-layout">
+  <div class="profile-container">
 
-  <div class="picture-frame">
-    <div class="profile-picture">
-      <%= cl_image_tag current_user.photo.key %>
+    <div class="profile grid-row-span-2 profile-card">
+
+      <div class="profile-up">
+
+        <div class="profile-avatar">
+          <%= cl_image_tag current_user.photo.key %>
+        </div>
+
+        <div class="profile-details">
+
+          <h3><%=@user.email%></h3>
+          <p>Size of your capy fleet: <b><%=@user.capybaras.size%></b></p>
+          <p>You booked <b><%=@user.bookings.size%></b> capybaras so far!</p>
+          <% sum = 0 %>
+          <% @user.capybaras.each { |capybara| sum += capybara.bookings.size} %>
+          <p>You rented out <b><%=sum%></b> capybaras so far!</p>
+        </div>
+      </div>
+
+      <div class="capybara-details">
+        <h3>Your capybaras:</h3>
+        <div class="capybara-icons">
+          <% @capybaras.each do |capybara| %>
+            <%= link_to capybara_path(capybara), class: "capybara-link" do %>
+              <%= cl_image_tag capybara.photo.key %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
     </div>
-    <p>Capybara-Fan <%=@user.username%></p>
-    <div class="edit">
-      <p>Change profile picture</p>
+
+    <div class="profile-card manage-products">
+      <div class="manage-container">
+        <img src="assets/capy-icon.png" alt="capybara icon" width="70" height="70">
+        <p>Grow and expand your capybara fleet</p>
+      </div>
+      <a class="btn btn-success btn-lg" href="<%=new_capybara_path%>">Add new capybara</a>
     </div>
+
+    <div class="profile-card manage-bookings">
+      <div class="manage-container">
+        <img src="assets/calendar.png" alt="calendar icon" width="70" height="70">
+        <p>Get an overview of all your bookings</p>
+      </div>
+      <a class="btn btn-success btn-lg" href="<%=bookings_path%>">Manage bookings</a>
+    </div>
+
   </div>
-
-  <div class="your-capys">
-    <h1>Your capybaras:</h1>
-    <ul>
-      <% @capybaras.each do |capybara| %>
-        <li><%= link_to capybara.name, capybara_path(capybara.id), class: "capybara-link" %></li>
-      <% end %>
-    </ul>
-    <div class="edit">
-      <p>edit</p>
-    </div>
-  </div>
-
-  <div class="your-bookings">
-    <h1>Your bookings:</h1>
-    <ul>
-      <% @bookings.each do |booking| %>
-        <li><%=booking.date%>: <%= link_to booking.capybara.name, capybara_path(booking.capybara.id), class: "capybara-link" %></li>
-      <% end %>
-    </ul>
-    <div class="edit">
-      <p>edit</p>
-    </div>
-  </div>
-
 </div>

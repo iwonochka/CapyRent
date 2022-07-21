@@ -39,7 +39,7 @@
 
     <div class="profile-card manage-products">
       <div class="manage-container">
-        <img src="assets/capy-icon.png" alt="capybara icon" width="70" height="70">
+        <%= image_tag "capy-icon.png", alt: "calendar icon", width: 70, height: 70 %>
         <p>Grow and expand your capybara fleet</p>
       </div>
       <a class="btn btn-success btn-lg" href="<%=new_capybara_path%>">Add new capybara</a>
@@ -47,7 +47,7 @@
 
     <div class="profile-card manage-bookings">
       <div class="manage-container">
-        <img src="assets/calendar.png" alt="calendar icon" width="70" height="70">
+        <%= image_tag "calendar.png", alt: "calendar icon", width: 70, height: 70 %>
         <p>Get an overview of all your bookings</p>
       </div>
       <a class="btn btn-success btn-lg" href="<%=bookings_path%>">Manage bookings</a>

@@ -5,6 +5,7 @@
     <%= simple_form_for(@capybara) do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
+        <%= f.input :address %>
         <%= f.input :price %>
        <%= f.input :photo, as: :file %>
       <%= f.submit 'Add your capybara', class: "booking-button btn btn-success"%>

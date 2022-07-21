@@ -4,7 +4,7 @@
   <% @bookings.each do |booking| %>
     <div class="booking">
       <div class="booking-header">
-        <img src="assets/tick.svg" alt="booking icon" width="70" height="70" class="corner-icon">
+        <%= image_tag "tick.svg", alt: "calendar icon", class: "corner-icon", width: 70, height: 70 %>
         <%= link_to capybara_path(booking.capybara), class: "capybara-link capybara-icons" do %>
           <%= cl_image_tag booking.capybara.photo.key %>
         <% end %>

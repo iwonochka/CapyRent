@@ -30,7 +30,7 @@
    <div class="form-container">
     <h3>Rent this fluff!</h3>
     <div class="capy-icon-form">
-      <img src="../../assets/capy-icon.png" alt="capybara icon" width="70" height="70">
+      <%= image_tag "capy-icon.png", alt: "calendar icon", width: 70, height: 70 %>
     </div>
     <%= simple_form_for [@capybara, @booking] do |f| %>
       <%= f.input :date, html5: true %>
